@@ -1,11 +1,3 @@
-puts "Hello! Welcome Back :)
-\nWould you like to conduct a calculation 'Type yes or no')?"
-reply = gets.chomp.downcase
-
-unless reply != "no"
-  abort("That's okay, you'll be back ;)")
-end
-
 loop do 
   while true 
     puts "\n=> What would you like to do?
@@ -38,7 +30,7 @@ else
   end
 end
 
-puts "\n=> The answer is: #{operation}"
+puts "\n=> The result is: #{operation}"
 
 puts "\n=> Would you like to perform another calculation?"
 begin
