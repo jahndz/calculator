@@ -1,38 +1,35 @@
-loop do 
-  while true 
-    puts "\n=> What would you like to do?
-  => Type '1' to Add
-  => Type '2' to Subtract
-  => Type '3' to Multiply
-  => Type '4' to Divide
-"
-  answer = gets.chomp
-  puts "\n=> What's the first number?"
-  num1 = gets.chomp
-  puts "\n=> What's the second number?"
-  num2 = gets.chomp
+puts "=> Hello! Welcome Back :)"
+loop do
+  puts "Enter first number:"
+  num1 = gets.chomp.to_f
 
-  case answer
-  when '1'
-  operation = num1.to_i + num2.to_i
-    break
-  when '2'
-  operation = num1.to_i - num2.to_i
-    break
-  when '3'
-  operation = num1.to_i * num2.to_i
-    break
-  when '4'
-  operation = num1.to_f / num2.to_f
-    break
-  else 
-  puts "\nSorry I can't perform that action, please input one of the four."
+  puts "Enter second number:"
+  num2 = gets.chomp.to_f
+
+  puts "=> Enter your operator:
+         => (+) to Add
+         => (-) to Subtract
+         => (*) to Multiply
+         => (/) to Divide
+         "
+  
+  operator = gets.chomp
+
+  case operator
+  when "+"
+    puts "=> The result is: #{num1 + num2}"
+  when "_"
+    puts "=> The result is: #{num1 - num2}"
+  when "*"
+    puts "=> The result is: #{num1 * num2}"
+  when "/"
+    puts "=> The result is: #{num1 / num2}"
+  else
+    puts "=> Sorry I don't understand that operation."
   end
-end
 
-  puts "\n=> The result is: #{operation}"
+  puts "=> Would you like to perform another operation?"
 
-  puts "\n=> Would you like to perform another calculation?"
   begin
     response = gets.chomp
   end until ['y', 'yes', 'n', 'no'].include?(response)
